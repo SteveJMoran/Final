@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>sudoku</title>
+	
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    
+    
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"> </script>
+    <script src="sudoku.js"></script>
+   
+   
+
+</head>
+
+<body>
+<div id="wrapper">
+	<header>
+   <h1>Steve's Super Sudoku</h1>
+   
+   </header>
+   <div id="board">
+	<table id="gameTable">
+    
+        <tbody id="game">
+            <tr class="row rowone">
+                <td id="0c" class="1"><input class="cell" type="text" maxlength="1" id="11" /></td>
+                <td id="1c" class="1"><input class="cell" type="text" maxlength="1" id="12" /></td>
+                <td id="2c" class="1"><input class="cell" type="text" maxlength="1" id="13" /></td>
+                <td id="3c" class="2"><input class="cell" type="text" maxlength="1" id="14" /></td>
+                <td id="4c" class="2"><input class="cell" type="text" maxlength="1" id="15" /></td>
+                <td id="5c" class="2"><input class="cell" type="text" maxlength="1" id="16" /></td>
+                <td id="6c" class="3"><input class="cell" type="text" maxlength="1" id="17" /></td>
+                <td id="7c" class="3"><input class="cell" type="text" maxlength="1" id="18" /></td>
+                <td id="8c" class="3"><input class="cell" type="text" maxlength="1" id="19" /></td>
+            </tr><!--row one-->
+            <tr class="row rowtwo">
+               	<td id="9c" class="1"><input class="cell" type="text" maxlength="1" id="21" /></td>
+                <td id="10c" class="1"><input class="cell" type="text" maxlength="1" id="22" /></td>
+                <td id="11c" class="1"><input class="cell" type="text" maxlength="1" id="23" /></td>
+                <td id="12c" class="2"><input class="cell" type="text" maxlength="1" id="24" /></td>
+                <td id="13c" class="2"><input class="cell" type="text" maxlength="1" id="25" /></td>
+                <td id="14c" class="2"><input class="cell" type="text" maxlength="1" id="26"/></td>
+                <td id="15c" class="3"><input class="cell" type="text" maxlength="1" id="27" /></td>
+               	<td id="16c" class="3"><input class="cell" type="text" maxlength="1" id="28" /></td>
+                <td id="17c" class="3"><input class="cell" type="text" maxlength="1" id="29" /></td>
+            </tr><!--row two-->
+            <tr class="row rowthree">
+               	<td id="18c" class="1"><input class="cell" type="text" maxlength="1" id="31"/></td>
+                <td id="19c" class="1"><input class="cell" type="text" maxlength="1" id="32"/></td>
+                <td id="20c" class="1"><input class="cell" type="text" maxlength="1" id="33"/></td>
+                <td id="21c" class="2"><input class="cell" type="text" maxlength="1" id="34" /></td>
+                <td id="22c" class="2"><input class="cell" type="text" maxlength="1" id="35"/></td>
+                <td id="23c" class="2"><input class="cell" type="text" maxlength="1" id="36"/></td>
+                <td id="24c" class="3"><input class="cell" type="text" maxlength="1" id="37"/></td>
+                <td id="25c" class="3"><input class="cell" type="text" maxlength="1" id="38"/></td>
+               	<td id="26c" class="3"><input class="cell" type="text" maxlength="1" id="39"/></td>
+            </tr><!--row three-->
+            <tr class="row rowfour">
+                <td id="27c" class="4"><input class="cell" type="text" maxlength="1" id="41"/></td>
+                <td id="28c" class="4"><input class="cell" type="text" maxlength="1" id="42"/></td>
+                <td id="29c" class="4"><input class="cell" type="text" maxlength="1" id="43"/></td>
+                <td id="30c" class="5"><input class="cell" type="text" maxlength="1" id="44"/></td>
+                <td id="31c" class="5"><input class="cell" type="text" maxlength="1" id="45"/></td>
+                <td id="32c" class="5"><input class="cell" type="text" maxlength="1" id="46"/></td>
+                <td id="33c" class="6"><input class="cell" type="text" maxlength="1" id="47"/></td>
+                <td id="34c" class="6"><input class="cell" type="text" maxlength="1" id="48"/></td>
+               	<td id="35c" class="6"><input class="cell" type="text" maxlength="1" id="49"/></td>
+            </tr><!--row four-->
+            <tr class="row rowfive">
+                <td id="36c" class="4"><input class="cell" type="text" maxlength="1" id="51"/></td>
+                <td id="37c" class="4"><input class="cell" type="text" maxlength="1" id="52"/></td>
+                <td id="38c" class="4"><input class="cell" type="text" maxlength="1" id="53"/></td>
+                <td id="39c" class="5"><input class="cell" type="text" maxlength="1" id="54"/></td>
+                <td id="40c" class="5"><input class="cell" type="text" maxlength="1" id="55"/></td>
+                <td id="41c" class="5"><input class="cell" type="text" maxlength="1" id="56"/></td>
+                <td id="42c" class="6"><input class="cell" type="text" maxlength="1" id="57"/></td>
+                <td id="43c" class="6"><input class="cell" type="text" maxlength="1" id="58"/></td>
+               	<td id="44c" class="6"><input class="cell" type="text" maxlength="1" id="59"/></td>
+            </tr><!--row five-->
+            <tr class="row rowsix">
+                <td id="45c" class="4"><input class="cell" type="text" maxlength="1" id="61"/></td>
+                <td id="46c" class="4"><input class="cell" type="text" maxlength="1" id="62"/></td>
+                <td id="47c" class="4"><input class="cell" type="text" maxlength="1" id="63"/></td>
+                <td id="48c" class="5"><input class="cell" type="text" maxlength="1" id="64"/></td>
+                <td id="49c" class="5"><input class="cell" type="text" maxlength="1" id="65"/></td>
+                <td id="50c" class="5"><input class="cell" type="text" maxlength="1" id="66"/></td>
+                <td id="51c" class="6"><input class="cell" type="text" maxlength="1" id="67"/></td>
+                <td id="52c" class="6"><input class="cell" type="text" maxlength="1" id="68"/></td>
+               	<td id="53c" class="6"><input class="cell" type="text" maxlength="1" id="69"/></td>
+            </tr><!--row six-->
+            <tr class="row rowseven">
+                <td id="54c" class="7"><input class="cell" type="text" maxlength="1" id="71"/></td>
+                <td id="55c" class="7"><input class="cell" type="text" maxlength="1" id="72"/></td>
+                <td id="56c" class="7"><input class="cell" type="text" maxlength="1" id="73"/></td>
+                <td id="57c" class="8"><input class="cell" type="text" maxlength="1" id="74"/></td>
+                <td id="58c" class="8"><input class="cell" type="text" maxlength="1" id="75"/></td>
+                <td id="59c" class="8"><input class="cell" type="text" maxlength="1" id="76"/></td>
+                <td id="60c" class="9"><input class="cell" type="text" maxlength="1" id="77"/></td>
+                <td id="61c" class="9"><input class="cell" type="text" maxlength="1" id="78"/></td>
+               	<td id="62c" class="9"><input class="cell" type="text" maxlength="1" id="79"/></td>
+            </tr><!--row seven-->
+            <tr class="row roweight">
+               	<td id="63c" class="7"><input class="cell" type="text" maxlength="1" id="81"/></td>
+                <td id="64c" class="7"><input class="cell" type="text" maxlength="1" id="82"/></td>
+                <td id="65c" class="7"><input class="cell" type="text" maxlength="1" id="83"/></td>
+                <td id="66c" class="8"><input class="cell" type="text" maxlength="1" id="84"/></td>
+                <td id="67c" class="8"><input class="cell" type="text" maxlength="1" id="85"/></td>
+                <td id="68c" class="8"><input class="cell" type="text" maxlength="1" id="86"/></td>
+                <td id="69c" class="9"><input class="cell" type="text" maxlength="1" id="87"/></td>
+                <td id="70c" class="9"><input class="cell" type="text" maxlength="1" id="88"/></td>
+               	<td id="71c" class="9"><input class="cell" type="text" maxlength="1" id="89"/></td>
+            </tr><!--row eight-->
+            <tr class="row rownine">
+                <td id="72c" class="7"><input class="cell" type="text" maxlength="1" id="91"/></td>
+                <td id="73c" class="7"><input class="cell" type="text" maxlength="1" id="92"/></td>
+                <td id="74c" class="7"><input class="cell" type="text" maxlength="1" id="93"/></td>
+                <td id="75c" class="8"><input class="cell" type="text" maxlength="1" id="94"/></td>
+                <td id="76c" class="8"><input class="cell" type="text" maxlength="1" id="95"/></td>
+                <td id="77c" class="8"><input class="cell" type="text" maxlength="1" id="96"/></td>
+                <td id="78c" class="9"><input class="cell" type="text" maxlength="1" id="97"/></td>
+                <td id="79c" class="9"><input class="cell" type="text" maxlength="1" id="98"/></td>
+               	<td id="80c" class="9"><input class="cell" type="text" maxlength="1" id="99"/></td>
+            </tr><!--row nine-->
+        </tbody>
+    </table>
+    <div id="submit">
+    	<div id="ResetFunction">Reset Table</div>
+        <div id="RandomFunction">Random Game</div>
+        <div id="checkFunction">Check My Answers</div>
+       
+    </div>
+     <div id="checks">
+            <label>1</label><input type="checkbox">
+            <label>2</label><input type="checkbox">
+            <label>3</label><input type="checkbox">
+            <label>4</label><input type="checkbox">
+            <label>5</label><input type="checkbox">
+            <label>6</label><input type="checkbox">
+            <label>7</label><input type="checkbox">
+            <label>8</label><input type="checkbox">
+            <label>9</label><input type="checkbox">
+        </div>
+	</div><!-- #board-->
+    
+</div><!-- #wrapper -->
+    
+
+</body>
+</html>
